@@ -1,0 +1,227 @@
+@font-face {
+  font-family: 'Raleway';
+  src: url(./Fonts/Raleway-VariableFont-wght.ttf) format('truetype');
+  font-display: swap;
+}
+
+:root {
+  --gradient1: hsl(6, 100%, 80%);
+  --gradient2: hsl(335, 100%, 65%);
+
+  --white: hsl(0, 0%, 100%);
+  --paleBlue: hsl(243, 100%, 93%);
+  --grayishBlue: hsl(229, 7%, 55%);
+  --darkBlue: hsl(228, 56%, 26%);
+  --deepDarkBlue: hsl(228, 57%, 18%);
+  --veryDarkBlue: hsl(229, 57%, 11%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--paleBlue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-area {
+  min-width: 320px;
+  height: 666px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 26% 6.4%;
+  background-image: url(./images/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.content-area {
+  width: 100%;
+  margin-bottom: 42px;
+}
+
+.first-area {
+  padding: 40px;
+  background: var(--darkBlue);
+  border-radius: 10px 100px 10px 10px;
+  margin-bottom: 16px;
+  box-shadow: 0 15px 30px -20px var(--veryDarkBlue);
+}
+.first-bottom-area {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.first-bottom-area .img {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--veryDarkBlue);
+  border-radius: 10px;
+  margin-right: 16px;
+}
+
+.second-area {
+  position: relative;
+  text-align: center;
+  padding: 32px;
+  background: var(--darkBlue);
+  border-radius: 10px;
+  box-shadow: 0 38px 50px -30px var(--veryDarkBlue);
+}
+.second-area h1 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+.second-area h1 span {
+  font-size: 0.875rem;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.second-area .progress-bar {
+  width: 100%;
+  height: 20px;
+  padding: 3px;
+  border-radius: 50px;
+  background-color: var(--deepDarkBlue);
+}
+
+.second-area .progress-bar .progress {
+  position: relative;
+  width: 74%;
+  height: 14px;
+  border-radius: 50px;
+  padding: 1px;
+  background: linear-gradient(to left, var(--gradient2), var(--gradient1));
+}
+.second-area .progress-bar .progress .ball {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  right: 2px;
+  top: 2px;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+.second-area .gb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin: 8px 0 24px;
+}
+
+.second-bottom-area .data-left {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 180px;
+  background: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+  left: calc(50% - 90px);
+  bottom: -40px;
+}
+.second-bottom-area .data-left p {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--veryDarkBlue);
+}
+.second-bottom-area .data-left h2 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--grayishBlue);
+}
+
+@media (min-width: 768px) {
+  .main-area {
+    width: 1440px;
+    height: 800px;
+    padding: 0;
+    background-image: url(./images/bg-desktop.png);
+    background-position: bottom 0 left 0;
+    background-size: 100%;
+    background-color: var(--veryDarkBlue);
+  }
+  .content-area {
+    width: 80%;
+    display: flex;
+    align-items: flex-end;
+    height: fit-content;
+    gap: 30px;
+    margin-bottom: 22px;
+  }
+  .first-area {
+    width: 40%;
+    margin-bottom: 0;
+  }
+  .second-area {
+    width: 60%;
+    padding: 40px;
+    text-align: left;
+  }
+  .second-area .gb {
+    margin-bottom: 0;
+  }
+
+  .second-bottom-area {
+    position: absolute;
+    right: 130px;
+    top: -16px;
+  }
+  .second-bottom-area .data-left {
+    border-radius: 10px 10px 0px 10px;
+  }
+
+  .triangle {
+    position: absolute;
+    border-top: 10px solid var(--white);
+    border-right: 10px solid var(--white);
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    right: -90px;
+    bottom: -58px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .content-area {
+    width: 920px;
+  }
+  .first-area {
+    width: 350px;
+  }
+  .second-area {
+    width: 540px;
+  }
+}
+@media (max-height: 800px) {
+  body {
+    align-items: flex-start;
+  }
+}
